@@ -1,0 +1,147 @@
+.hide {
+    display: none;
+}
+* {
+    border: 1px solid red;
+}
+html, body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* NAV */
+.nav {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 6em 1rf 6em;
+    grid-template-rows: 3em;
+    grid-template-areas: 
+        "left center right";
+}
+.nav-left {
+    grid-area: left;
+    display: flex;
+}
+.hamburger,.search {
+    width: 3em;
+    height: 3em;
+}
+.nav-item.logo {
+    grid-area: center;
+}
+.nav-right {
+    grid-area: right;
+    display: flex;
+    justify-content: flex-end;
+}
+.cart, .account {    
+    width: 3em;
+    height: 3em;
+}
+/* Jumbotron */
+
+.jumbotron img{
+    max-width: 100%;
+}
+.jumbotron-drawer {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+}
+.jumbotron-drawer > * {
+    margin: 0 0 1em 0;
+    color: black;
+}
+.jumbotron-drawer button {
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 40px;
+    border: none;
+}
+.jumbotron-drawer button img {
+    position: relative;
+    top: 2px;
+
+}
+
+/* item-box */
+.item-box-wrapper {
+    grid-gap: 1em;
+}
+.item-box > img {
+    max-width: 100%;
+}
+.item-box button {
+    background-color: white;
+    border: none;
+    color: blue;
+}
+button img {
+    width: .8em;
+    height: .8em;
+    
+}
+
+
+
+@media only screen and (min-width: 540px) {
+    .item-box-wrapper {
+        grid-gap: 1em;
+        padding: 1em;
+        display: grid;
+        grid-template-columns:  8fr 8fr;
+        grid-template-rows:     8fr 8fr;
+        grid-template-areas:
+        "box-a  box-b"
+        "box-c  box-d";
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    .item-box-wrapper {
+        grid-gap: 1em;
+        padding: 1em;
+        display: grid;
+        grid-template-columns:  8fr 8fr;
+        grid-template-rows:     8fr 8fr;
+        grid-template-areas:
+        "box-a  box-b"
+        "box-c  box-d";
+    }
+
+    .jumbotron {
+        position: relative;
+    }
+    .jumbotron img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .jumbotron-drawer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: left;
+        max-width: 30%;
+        color: white;
+    }
+}
+
+
+
+@media only screen and (min-width: 1085px) {
+    .item-box-wrapper {
+        grid-gap: 1em;
+        display: grid;
+        grid-template-columns:  8fr 8fr 8fr 8fr;
+        grid-template-rows:     8fr;
+        grid-template-areas:
+        "box-a  box-b   box-c  box-d";
+    }
+
+}
+
+
